@@ -7,7 +7,7 @@ if ENV["RBENV_VERSION"] == 'system' && !(rbenv_root = `rbenv root`.chomp).empty?
         `rbenv rehash`
       end
     rescue
-      warn "rbenv: error in system-gem-rehash (#{$!.class.name}: #{$!.message})"
+      warn "rbenv: error in system-ruby (#{$!.class.name}: #{$!.message})"
     end
   end
 
@@ -15,6 +15,6 @@ if ENV["RBENV_VERSION"] == 'system' && !(rbenv_root = `rbenv root`.chomp).empty?
     Gem.post_install(&hook)
     Gem.post_uninstall(&hook)
   rescue
-    warn "rbenv: error installing gem-rehash hooks (#{$!.class.name}: #{$!.message})"
+    warn "rbenv: error installing system-ruby hooks (#{$!.class.name}: #{$!.message})"
   end
 end
