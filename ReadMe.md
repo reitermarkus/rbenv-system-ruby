@@ -1,6 +1,6 @@
 # `rbenv` support for `system` Ruby
 
-Since setting `GEM_HOME` doesn't work well with `rbenv`, this plugin makes `gem` use `$(rbenv root)/versions/system` as `GEM_HOME`, when `rbenv version` returns `system`.
+Setting `GEM_HOME` doesn't work well with `rbenv` if you want Gems to be isolated per version. This plugin makes `gem` install under `RBENV_ROOT/versions/system`, when `rbenv version` is `system`. This way `system` is treated just like any other Ruby version installed with `rbenv`.
 
 # Installation
 
